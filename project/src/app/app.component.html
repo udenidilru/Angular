@@ -1,7 +1,8 @@
-<div>
-  <h1>Welcome to {{ title }}</h1>
+
   <app-header></app-header>
-  <app-banner></app-banner>
+  <app-banner *ngIf="router.url == '/'"></app-banner>
+  <app-blogpost-featured *ngIf="router.url == '/'"></app-blogpost-featured>
+  <router-outlet></router-outlet>
   <app-footer></app-footer>
-</div>
-<router-outlet></router-outlet>
+
+
